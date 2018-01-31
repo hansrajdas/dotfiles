@@ -1,2 +1,2 @@
 # dotfiles
-Few system hidden files
+- [.vimrc](.vimrc): Few useful vim settings.

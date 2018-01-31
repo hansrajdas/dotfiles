@@ -1,0 +1,11 @@
+set ignorecase
+set number
+set autoindent
+set incsearch
+set tabstop=2
+set hlsearch
+set expandtab
+set colorcolumn=81
+set relativenumber
+set shiftwidth=2
+colorscheme elflord
