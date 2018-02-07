@@ -5,7 +5,8 @@ set incsearch
 set tabstop=2
 set hlsearch
 set expandtab
-set colorcolumn=81
+highlight ColorColumn ctermbg=yellow
+set colorcolumn=81,101
 set relativenumber
 set shiftwidth=2
 colorscheme elflord
