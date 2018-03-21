@@ -8,5 +8,5 @@ set expandtab
 set colorcolumn=81,101
 set relativenumber
 set shiftwidth=2
-colorscheme elflord
+colorscheme desert
 set spell
