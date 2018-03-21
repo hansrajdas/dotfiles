@@ -4,11 +4,11 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias xterm='xterm -bg white -fg black -fa 'Monospace''
 alias ctags='ctags -RV --file-tags=yes'
-alias gst='git status -s'
-alias gdf='git status -s | grep -v "??" | cut -d " " -f3 | xargs git diff '
-alias gct='git status -s | grep -v "??" | cut -d " " -f3 | xargs git commit -m $1 '
+alias s='git status -s'
+alias d='git diff'
+alias b='git branch'
+alias gct='git commit -am $1'
 alias cl='git5 export --copy-detection -i'
-alias br='git branch'
 
 alias placer=/google/data/ro/projects/placer/placer
 
