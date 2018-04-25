@@ -9,4 +9,3 @@ set colorcolumn=81,101
 set relativenumber
 set shiftwidth=2
 colorscheme desert
-set spell
