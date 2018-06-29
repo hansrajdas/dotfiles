@@ -1,3 +1,3 @@
 source ~/.common.vim
 set spell
-highlight ColorColumn guibg=yellow
+highlight ColorColumn guibg=red

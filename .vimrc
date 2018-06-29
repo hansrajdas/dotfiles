@@ -1,2 +1,2 @@
 source ~/.common.vim
-highlight ColorColumn ctermbg=yellow
+highlight ColorColumn ctermbg=red
