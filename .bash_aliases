@@ -47,9 +47,3 @@ function op() {
 function g() {
   grep -nri --color=auto "$1" .
 }
-
-# Add this to .bashrc
-# if [ -f ~/.bash_aliases ]; then
-#     . ~/.bash_aliases
-# fi
-
