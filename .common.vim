@@ -9,6 +9,7 @@ set colorcolumn=80,100
 set relativenumber
 set shiftwidth=2
 colorscheme desert
+set cursorline
 
 " Open close maps
 inoremap " ""<left>
