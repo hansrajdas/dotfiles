@@ -1,5 +1,6 @@
 # export PS1="\u@\h \w$ "
 export PS1="\u@\h:\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
+export CLICOLOR=YES  # For macOS
 
 source $HOME/git-completion.bash
 
@@ -24,19 +25,16 @@ alias gct='git commit -am $1'
 # alias announce_dev='mysql -u hansrajd -h 173.194.246.226 announce'
 # alias announce_prod='mysql -u hansrajd -h 173.194.230.126 announce'
 
-# alias p='cd ~/Desktop/Interviews/programs/'
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
 fi
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # Some more ls aliases
 alias ll='ls -alF'
