@@ -32,5 +32,8 @@ filetype plugin on
 " Used by :find ...
 set path+=**
 
+" Skip *.pyc files while searching for file using find command
+set wildignore+=**/*.pyc
+
 " Display all matching files when we tab complete
 set wildmenu
