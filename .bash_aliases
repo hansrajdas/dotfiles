@@ -42,7 +42,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 function op() {
-  gvim -p `find . -name "$1"`
+  vim -p `find . -name "$1"`
 }
 
 function g() {
