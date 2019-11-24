@@ -39,7 +39,7 @@ alias l='ls -CF'
 shopt -s extglob
 
 function op() {
-  gvim -p `find . -name "$1"`
+  vim -p `find . -name "$1"`
 }
 
 function g() {
