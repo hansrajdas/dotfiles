@@ -2,12 +2,12 @@ set ignorecase
 set number
 set autoindent
 set incsearch
-set tabstop=2
+set tabstop=4
 set hlsearch
 set expandtab
 set colorcolumn=80,100
 set relativenumber
-set shiftwidth=2
+set shiftwidth=4
 colorscheme desert
 set cursorline
 
