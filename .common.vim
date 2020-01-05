@@ -12,7 +12,7 @@ colorscheme desert
 set cursorline
 
 " Mappings
-cnoremap ff find 
+cnoremap ff find
 
 " Enter the current millenium
 set nocompatible
