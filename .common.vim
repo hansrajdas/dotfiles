@@ -11,14 +11,8 @@ set shiftwidth=4
 colorscheme desert
 set cursorline
 
-" Open close maps
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
+" Mappings
+cnoremap ff find 
 
 " Enter the current millenium
 set nocompatible
