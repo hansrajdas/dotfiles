@@ -11,4 +11,7 @@ brew install --cask iterm2
 ```
 
 ## git-completion.bash
-- Download [latest](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) `git-completion.bash` and place at `$HOME`
+- To get latest `git-completion.bash` file, run below command from `$HOME` directory
+```
+curl https://github.com/git/git/blob/master/contrib/completion/git-completion.bash -O
+```
