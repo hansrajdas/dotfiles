@@ -4,7 +4,11 @@
 - [.gvimrc](.gvimrc): Few useful gvim settings.
 - [.bash_aliases](.bash_aliases): Bash aliases
 
-# Install iterm2 on MacOs
+# Additional steps
+## Install iterm2 on MacOs
 ```
 brew install --cask iterm2
 ```
+
+## git-completion.bash
+- Download [latest](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash) `git-completion.bash` and place at `$HOME`
