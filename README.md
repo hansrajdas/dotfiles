@@ -5,7 +5,13 @@
 - [.bash_aliases](.bash_aliases): Bash aliases
 
 ## Additional settings
-### Install iterm2 on MacOs
+### git-completion.bash
+To get latest `git-completion.bash` file, run below command from `$HOME` directory
+```bash
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O
+```
+### MacOs
+- Install iterm2 on MacOs
 ```bash
 brew install --cask iterm2
 ```
@@ -17,17 +23,9 @@ brew install --cask iterm2
   - Iterm2 > Preferences > Profiles > Select profile name > Keys
     - In __Left option key__, select `Esc+`. This gives alternative of `ALT + b or f` using `left-option b or f`
 
-
-### git-completion.bash
-To get latest `git-completion.bash` file, run below command from `$HOME` directory
-```bash
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O
-```
-
-### Make default shell as bash
-Follow: https://www.shell-tips.com/mac/upgrade-bash/
-
-### Fasten key repeat settings
-MacOs > System preferences > keyboard
-- __Key Repeat__ should be fastest
-- __Delay Until Repeat__ should be shortest
+- Make default shell as bash: https://www.shell-tips.com/mac/upgrade-bash/
+- Fasten key repeat settings: Go to System preferences > keyboard
+  - __Key Repeat__ should be fastest
+  - __Delay Until Repeat__ should be shortest
+- Execute `~/.bashrc` on startup
+  - In MacOs `~/.bashrc` is not executed on startup so create `~/.bash_profile` and source `~/.bashrc` into it. See [this](https://apple.stackexchange.com/questions/12993/why-doesnt-bashrc-run-automatically) for details
