@@ -15,7 +15,7 @@ brew install --cask iterm2
     - Background: R = 0, G = 0, B = 0
     - Cursor colors > Cursor: R = 0, G = 200, B = 0
   - Iterm2 > Preferences > Profiles > Select profile name > Keys
-    - In __Left option key__, select `Esc+`. This is give alternative to `ALT + b or f` using `left-option b or f`
+    - In __Left option key__, select `Esc+`. This gives alternative of `ALT + b or f` using `left-option b or f`
 
 
 ### git-completion.bash
