@@ -3,6 +3,7 @@
 - [.vimrc](.vimrc): Few useful vim settings
 - [.gvimrc](.gvimrc): Few useful gvim settings
 - [.bash_aliases](.bash_aliases): Bash aliases
+- [.bashrc](.bashrc): Bashrc file
 
 ## Additional settings
 ### git-completion.bash
@@ -10,8 +11,8 @@ To get latest `git-completion.bash` file, run below command from `$HOME` directo
 ```bash
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O
 ```
-### MacOs
-- Install iterm2 on MacOs
+### MacOS
+- Install iterm2 on MacOS
 ```bash
 brew install --cask iterm2
 ```
@@ -28,4 +29,4 @@ brew install --cask iterm2
   - __Key Repeat__ should be fastest
   - __Delay Until Repeat__ should be shortest
 - Execute `~/.bashrc` on startup
-  - In MacOs `~/.bashrc` is not executed on startup so create `~/.bash_profile` and source `~/.bashrc` into it. See [this](https://apple.stackexchange.com/questions/12993/why-doesnt-bashrc-run-automatically) for details
+  - In MacOS `~/.bashrc` is not executed on startup so create `~/.bash_profile` and source `~/.bashrc` into it. See [this](https://apple.stackexchange.com/questions/12993/why-doesnt-bashrc-run-automatically) for details
