@@ -1,19 +1,21 @@
 # export PS1="\u@\h \w$ "
-export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
+export PS1="\u@\h:\[\033[32m\]\w\[\033[33m\] \$(parse_git_branch)\[\033[00m\]$ "
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 
 source $HOME/git-completion.bash
 
-alias rm='rm -i'
+alias rm='rm -iv'
 alias ff='find . -name'
-alias cp='cp -i'
-alias mv='mv -i'
+alias cp='cp -iv'
+alias mv='mv -iv'
 alias xterm='xterm -bg white -fg black -fa 'Monospace''
 alias ctags='ctags -RV --file-tags=yes'
+alias gotags='ctags -R .'
 alias s='git status -s'
 alias d='git diff'
 alias b='git branch'
+alias gl='git log --all --graph'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -31,6 +33,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias notes='vim ~/work/2775/hansrajd_notes.md'
+
 # Set options
 shopt -s extglob
 
@@ -43,5 +47,13 @@ function g() {
 }
 
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/ˆ[ˆ*]/d' -e 's/* \(.*\)/ (\1)/'
+  git branch 2> /dev/null | grep "\*" | cut -d " " -f2
 }
+
+# K8s
+source <(kubectl completion bash)  # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+
+alias k=kubectl
+complete -F __start_kubectl k
+
+alias dlv=/Users/hansrajd/go/bin/dlv
