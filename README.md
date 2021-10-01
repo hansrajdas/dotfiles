@@ -27,6 +27,6 @@ brew install --cask iterm2
 - Make default shell as bash: https://www.shell-tips.com/mac/upgrade-bash/
 - Fasten key repeat settings: Go to System preferences > keyboard
   - __Key Repeat__ should be fastest
-  - __Delay Until Repeat__ should be shortest
+  - __Delay Until Repeat__ should be one less than shortest
 - Execute `~/.bashrc` on startup
   - In MacOS `~/.bashrc` is not executed on startup so create `~/.bash_profile` and source `~/.bashrc` into it. See [this](https://apple.stackexchange.com/questions/12993/why-doesnt-bashrc-run-automatically) for details

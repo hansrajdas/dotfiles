@@ -8,7 +8,7 @@ set expandtab
 set colorcolumn=80,100
 set relativenumber
 set shiftwidth=4
-colorscheme desert
+colorscheme default
 set cursorline
 
 " Mappings
