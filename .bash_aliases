@@ -18,6 +18,7 @@ alias s='git status -s'
 alias d='git diff'
 alias b='git branch'
 alias gl='git log --all --graph'
+alias python='python3'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -35,7 +36,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias notes='vim ~/work/2775/hansrajd_notes.md'
+alias notes='vim ~/code/2775/hansrajd_notes.md'
 
 # Set options
 shopt -s extglob
@@ -57,5 +58,7 @@ source <(kubectl completion bash)  # setup autocomplete in bash into the current
 
 alias k=kubectl
 complete -F __start_kubectl k
+
+alias kk='basename $KUBECONFIG'
 
 alias dlv=/Users/hansrajd/go/bin/dlv
