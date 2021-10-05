@@ -1,5 +1,9 @@
 set -o vi
 
+RED=`tput setaf 1`
+GREEN=`tput setaf 2`
+RESET=`tput sgr0`
+
 # export PS1="\u@\h \w$ "
 export PS1="\[\033[32m\]\w\[\033[33m\] \$(parse_git_branch)\[\033[00m\]$ "
 export CLICOLOR=YES  # For macOS
@@ -59,6 +63,6 @@ source <(kubectl completion bash)  # setup autocomplete in bash into the current
 alias k=kubectl
 complete -F __start_kubectl k
 
-alias kk='basename $KUBECONFIG'
+alias kk='echo "${RED}`basename $KUBECONFIG`${RESET}"'
 
 alias dlv=/Users/hansrajd/go/bin/dlv
