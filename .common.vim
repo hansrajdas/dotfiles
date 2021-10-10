@@ -13,6 +13,7 @@ set cursorline
 
 " Mappings
 cnoremap ff find
+cnoremap tt tabedit
 
 " Enter the current millenium
 set nocompatible
