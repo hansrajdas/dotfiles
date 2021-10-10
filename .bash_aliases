@@ -2,10 +2,11 @@ set -o vi
 
 RED=`tput setaf 1`
 GREEN=`tput setaf 2`
+YELLOW=`tput setaf 3`
 RESET=`tput sgr0`
 
 # export PS1="\u@\h \w$ "
-export PS1="\[\033[32m\]\w\[\033[33m\] \$(parse_git_branch)\[\033[00m\]$ "
+export PS1="${GREEN}\w${RESET} ${YELLOW}\$(parse_git_branch)${RESET}$ "
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 
