@@ -5,7 +5,7 @@ set incsearch
 set tabstop=4
 set hlsearch
 set expandtab
-set colorcolumn=80,100
+set colorcolumn=120
 set relativenumber
 set shiftwidth=4
 colorscheme default

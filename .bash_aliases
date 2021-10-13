@@ -9,6 +9,7 @@ RESET=`tput sgr0`
 export PS1="${GREEN}\w${RESET} ${YELLOW}\$(parse_git_branch)${RESET}$ "
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
+export CSCOPE_EDITOR=vim
 
 source $HOME/git-completion.bash
 
@@ -65,6 +66,14 @@ source <(kubectl completion bash)  # setup autocomplete in bash into the current
 alias k=kubectl
 complete -F __start_kubectl k
 
-alias kk='echo "${RED}`basename $KUBECONFIG`${RESET}"'
+get_cluster_name() {
+    kubectl config view | grep "cluster: " | cut -d ":" -f2 | xargs
+}
+
+get_namespace() {
+    kubectl config view | grep "namespace: " | cut -d ":" -f2 | xargs
+}
+
+alias kk='echo cluster: "${RED}$(get_cluster_name)${RESET}    namespace: ${RED}$(get_namespace)${RESET}"'
 
 alias dlv=/Users/hansrajd/go/bin/dlv
