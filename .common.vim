@@ -32,3 +32,5 @@ set wildignore+=**/*.pyc
 
 " Display all matching files when we tab complete
 set wildmenu
+
+cnoremap jj !./run_swagger.sh

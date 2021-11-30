@@ -76,4 +76,12 @@ get_namespace() {
 
 alias kk='echo cluster: "${RED}$(get_cluster_name)${RESET}    namespace: ${RED}$(get_namespace)${RESET}"'
 
+# Golang
 alias dlv=/Users/hansrajd/go/bin/dlv
+
+cover () {
+    local t=$(mktemp -t cover)
+    go test ./... $COVERFLAGS -coverprofile=$t $@ \
+        && go tool cover -func=$t \
+        && unlink $t
+}
