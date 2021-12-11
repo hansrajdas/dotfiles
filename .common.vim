@@ -11,10 +11,6 @@ set shiftwidth=4
 colorscheme default
 set cursorline
 
-" Mappings
-cnoremap ff find
-cnoremap tt tabedit
-
 " Enter the current millenium
 set nocompatible
 
@@ -32,3 +28,15 @@ set wildignore+=**/*.pyc
 
 " Display all matching files when we tab complete
 set wildmenu
+
+" Start plugins
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()  " Initialize plugin system
+" End plugins
+
+" Mappings
+cnoremap ff find
+cnoremap tt tabedit
+nnoremap <C-p> :Files<Cr>
