@@ -37,6 +37,4 @@ call plug#end()  " Initialize plugin system
 " End plugins
 
 " Mappings
-cnoremap ff find
-cnoremap tt tabedit
 nnoremap <C-p> :Files<Cr>

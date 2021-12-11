@@ -37,7 +37,7 @@ brew install --cask iterm2
     - In __Left option key__, select `Esc+`. This gives alternative of `ALT + b or f` using `left-option b or f`
     - __Note__: With [this](https://github.com/hansrajdas/dotfiles/commit/cf011d1489cfd45b71588c5a00b3e4c5ed3af7f5) commit, `vi` is enabled for command line also so this step will help if we go into some other prompt like `gdb`, `delve`, ...
 
-- Make default shell as bash: https://www.shell-tips.com/mac/upgrade-bash/
+- Upgrade bash and make it default shell: https://www.shell-tips.com/mac/upgrade-bash/
 - Fasten key repeat settings: Go to System preferences > keyboard
   - __Key Repeat__ should be fastest
   - __Delay Until Repeat__ should be one less than shortest
