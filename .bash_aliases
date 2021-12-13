@@ -11,8 +11,6 @@ export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 export CSCOPE_EDITOR=vim
 
-source $HOME/git-completion.bash
-
 alias rm='rm -iv'
 alias ff='find . -name'
 alias cp='cp -iv'
@@ -48,6 +46,11 @@ alias notes='vim ~/code/2775/hansrajd_notes.md'
 # Set options
 shopt -s extglob
 
+# Completion files
+source $HOME/git-completion.bash
+source $HOME/completion.bash
+source $HOME/key-bindings.bash
+
 function op() {
   vim -p `find . -name "$1"`
 }
@@ -62,7 +65,6 @@ parse_git_branch() {
 
 # K8s
 source <(kubectl completion bash)  # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
-
 alias k=kubectl
 complete -F __start_kubectl k
 

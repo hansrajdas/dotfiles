@@ -18,9 +18,16 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 
 ### git-completion.bash
-To get latest `git-completion.bash` file, run below command from `$HOME` directory
+- Get latest `git-completion.bash` file, run below command from `$HOME` directory
 ```bash
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O
+```
+
+### fzf completion bash scripts
+- Get latest `fzf` scripts, run below command from `$HOME` directory
+```bash
+curl https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash -O
+curl https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash -O
 ```
 
 ### MacOS
