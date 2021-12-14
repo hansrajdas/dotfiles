@@ -11,6 +11,9 @@ export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 export CSCOPE_EDITOR=vim
 
+# System params
+HISTSIZE=1000000  # 1M
+
 alias rm='rm -iv'
 alias ff='find . -name'
 alias cp='cp -iv'
