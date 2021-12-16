@@ -12,7 +12,7 @@ export EDITOR=vim
 export CSCOPE_EDITOR=vim
 
 # System params
-HISTSIZE=1000000  # 1M
+HISTSIZE=500000
 
 alias rm='rm -iv'
 alias ff='find . -name'

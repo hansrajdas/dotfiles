@@ -1,2 +1,2 @@
-source $HOME/dotfiles/.common.vim
+source $PWD/common.vim
 highlight ColorColumn ctermbg=red
