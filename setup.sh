@@ -4,6 +4,7 @@ BASE=$PWD
 BACKUP_EXT=$(date +%s)
 
 # 1. Setup VIM
+## Install plugin manager vim-plug which manages other vim plugins installed
 mkdir -p ~/.vim/autoload
 
 curl --insecure --create-dirs -fLo ~/.vim/autoload/plug.vim \

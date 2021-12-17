@@ -4,30 +4,6 @@
 - [tmux.conf](tmux.conf): tmux.conf file, don't use this much
 
 ## Additional settings
-### Install vim plugin manager
-- Install plugin manager [vim-plug](https://github.com/junegunn/vim-plug#installation) which manages other vim plugins installed
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-- Install all plugins listed in `~/.vimrc` file (in plug#begin...end section)
-```vim
-:PlugInstall
-```
-
-### git-completion.bash
-- Get latest `git-completion.bash` file, run below command from `$HOME` directory
-```bash
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O
-```
-
-### fzf completion bash scripts
-- Get latest `fzf` scripts, run below command from `$HOME` directory
-```bash
-curl https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.bash -O
-curl https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.bash -O
-```
-
 ### MacOS
 - Install iterm2 on MacOS
 ```bash
