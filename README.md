@@ -1,8 +1,7 @@
 ## dotfiles
-- [common.vim](common.vim): Common to vimrc and gvimrc
-- [vimrc](vimrc): Few useful vim settings
-- [gvimrc](gvimrc): Few useful gvim settings
+- [vimrc](vimrc): VIM settings
 - [bashrc](bashrc): Bashrc file
+- [tmux.conf](tmux.conf): tmux.conf file, don't use this much
 
 ## Additional settings
 ### Install vim plugin manager

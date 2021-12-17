@@ -10,6 +10,7 @@ set colorcolumn=120
 set relativenumber
 set shiftwidth=4
 set cursorline
+" set spell
 
 " Enter the current millenium
 set nocompatible
@@ -30,6 +31,8 @@ set wildignore+=**/*.pyc
 set wildmenu
 
 highlight ColorColumn ctermbg=red
+" For GVIM
+" highlight ColorColumn guibg=red
 
 " Start plugins
 call plug#begin('~/.vim/plugged')
