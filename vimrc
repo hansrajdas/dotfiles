@@ -6,7 +6,7 @@ set incsearch
 set tabstop=4
 set hlsearch
 set expandtab
-set colorcolumn=120
+" set colorcolumn=120
 set relativenumber
 set shiftwidth=4
 set cursorline
@@ -43,3 +43,5 @@ call plug#end()  " Initialize plugin system
 
 " Mappings
 nnoremap <C-p> :Files<Cr>
+nnoremap <Leader>b :Buffers<Cr>
+nnoremap <C-n> :bn<Cr>

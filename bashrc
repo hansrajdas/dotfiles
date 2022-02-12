@@ -45,6 +45,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias notes='vim ~/code/2775/hansrajd_notes.md'
+alias sre='vim ~/code/2947/sre_troubleshooting_guide.md'
 
 # Set options
 shopt -s extglob
