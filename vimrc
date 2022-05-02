@@ -44,4 +44,5 @@ call plug#end()  " Initialize plugin system
 " Mappings
 nnoremap <C-p> :Files<Cr>
 nnoremap <Leader>b :Buffers<Cr>
-nnoremap <C-n> :bn<Cr>
+nnoremap <C-n> :n<Cr>
+nnoremap <C-s> :wn<Cr>

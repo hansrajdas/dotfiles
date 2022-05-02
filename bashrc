@@ -7,6 +7,7 @@ RESET=`tput sgr0`
 
 # export PS1="\u@\h \w$ "
 export PS1="\[${GREEN}\]\w\[${RESET}\] \[${YELLOW}\]\$(parse_git_branch)\[${RESET}\]$ "
+export PATH=$PATH:$HOME/bin
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 export CSCOPE_EDITOR=vim
