@@ -2,6 +2,7 @@
 - [vimrc](vimrc): VIM settings
 - [bashrc](bashrc): Bashrc file
 - [tmux.conf](tmux.conf): tmux.conf file, don't use this much
+- [setup.sh](setup.sh): Setup file for installation and backup of current configs
 
 ## Additional settings
 ### MacOS
