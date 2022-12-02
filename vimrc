@@ -30,6 +30,9 @@ set wildignore+=**/*.pyc
 " Display all matching files when we tab complete
 set wildmenu
 
+" Open diff in side by side view over horizontal
+set diffopt+=vertical
+
 highlight ColorColumn ctermbg=red
 " For GVIM
 " highlight ColorColumn guibg=red
@@ -46,3 +49,6 @@ nnoremap <C-p> :Files<Cr>
 nnoremap <Leader>b :Buffers<Cr>
 nnoremap <C-n> :n<Cr>
 nnoremap <C-s> :wn<Cr>
+
+" Commands
+command! Py ! python %
