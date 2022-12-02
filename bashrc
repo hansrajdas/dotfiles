@@ -56,10 +56,6 @@ source $HOME/git-completion.bash
 source $HOME/completion.bash
 source $HOME/key-bindings.bash
 
-function op() {
-  vim -p `find . -name "$1"`
-}
-
 function gg() {
   grep -nri --include=\*.{go,py,c,h,cpp,js,tf,json,sh,html,env,yml,yaml} --color=auto "$1" .
 }
