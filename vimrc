@@ -1,6 +1,5 @@
 colorscheme default
 set ignorecase
-set number
 set autoindent
 set incsearch
 set tabstop=4
