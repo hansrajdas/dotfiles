@@ -56,17 +56,15 @@ source $HOME/git-completion.bash
 source $HOME/completion.bash
 source $HOME/key-bindings.bash
 
-function op() {
-  vim -p `find . -name "$1"`
-}
+alias g='fd -H -t f | xargs grep --color=auto -ni $1'
 
-function gg() {
-  grep -nri --include=\*.{go,py,c,h,cpp,js,tf,json,sh,html,env,yml,yaml} --color=auto "$1" .
-}
-
-function g() {
-  grep -nri --color=auto "$1" .
-}
+# function g() {
+#   grep -nri --color=auto "$1" .
+# }
+# 
+# function gg() {
+#   grep -nri --include=\*.{go,py,c,h,cpp,js,tf,json,sh,html,env,yml,yaml} --color=auto "$1" .
+# }
 
 parse_git_branch() {
   git branch 2> /dev/null | grep "\*" | cut -d " " -f2
