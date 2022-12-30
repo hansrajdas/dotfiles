@@ -5,7 +5,7 @@ set incsearch
 set tabstop=4
 set hlsearch
 set expandtab
-" set colorcolumn=100,120
+" set colorcolumn=100
 set relativenumber
 set shiftwidth=4
 set cursorline
