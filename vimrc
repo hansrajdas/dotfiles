@@ -1,15 +1,17 @@
-colorscheme default
+set number
+set relativenumber
 set ignorecase
 set autoindent
 set incsearch
-set tabstop=4
 set hlsearch
-set expandtab
 " set colorcolumn=100
-set relativenumber
+" Tab is 4 spaces
+set tabstop=4
 set shiftwidth=4
+set expandtab
 set cursorline
 " set spell
+colorscheme default
 
 " Enter the current millenium
 set nocompatible
