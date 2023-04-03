@@ -56,7 +56,7 @@ source $HOME/git-completion.bash
 source $HOME/completion.bash
 source $HOME/key-bindings.bash
 
-alias g='fd -H -t f | xargs grep --color=auto -ni $1'
+alias g='fd -H -t f --exclude=z | xargs grep --color=auto -ni $1'
 
 # function g() {
 #   grep -nri --color=auto "$1" .

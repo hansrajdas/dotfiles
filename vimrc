@@ -4,6 +4,7 @@ set ignorecase
 set autoindent
 set incsearch
 set hlsearch
+set ruler
 " set colorcolumn=100
 " Tab is 4 spaces
 set tabstop=4
@@ -48,7 +49,7 @@ call plug#end()  " Initialize plugin system
 " Mappings
 nnoremap <C-p> :Files<Cr>
 nnoremap <Leader>b :Buffers<Cr>
-nnoremap <C-n> :n<Cr>
+nnoremap <C-n> :bn<Cr>
 nnoremap <C-s> :wn<Cr>
 
 " Commands
