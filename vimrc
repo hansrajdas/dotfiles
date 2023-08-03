@@ -1,14 +1,14 @@
 set number
 set relativenumber
 set ignorecase
-set autoindent
-set incsearch
 set hlsearch
+set incsearch
 set ruler
-" set colorcolumn=100
+set colorcolumn=100
 " Tab is 4 spaces
 set tabstop=4
 set shiftwidth=4
+set autoindent
 set expandtab
 set cursorline
 " set spell
