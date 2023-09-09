@@ -7,7 +7,7 @@ RESET=`tput sgr0`
 
 # export PS1="\u@\h \w$ "
 export PS1="\[${GREEN}\]\w\[${RESET}\] \[${YELLOW}\]\$(parse_git_branch)\[${RESET}\]$ "
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/go/bin
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 export CSCOPE_EDITOR=vim
@@ -21,8 +21,9 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias xterm='xterm -bg white -fg black -fa 'Monospace''
 alias ctags='ctags -RV --file-tags=yes'
-alias gotags='gotags -R . > tags'
+# alias gotags='gotags -R . > tags'
 alias cscope='cscope -RC'
+alias c='clear'
 alias s='git status -s'
 alias d='git diff'
 alias b='git branch'
@@ -57,6 +58,7 @@ source $HOME/completion.bash
 source $HOME/key-bindings.bash
 
 alias g='fd -H -t f --exclude={z,tags,.git,cscope.files,cscope.out} | xargs grep --color=auto -ni $1'
+alias gw='fd -H -t f --exclude={z,tags,.git,cscope.files,cscope.out} | xargs grep --color=auto -nw $1'
 
 # function g() {
 #   grep -nri --color=auto "$1" .
