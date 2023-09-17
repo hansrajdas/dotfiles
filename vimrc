@@ -43,6 +43,7 @@ highlight ColorColumn ctermbg=red
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()  " Initialize plugin system
 " End plugins
 

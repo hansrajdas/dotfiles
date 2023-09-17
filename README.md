@@ -1,4 +1,4 @@
-## dotfiles
+all## dotfiles
 - [vimrc](vimrc): VIM settings
 - [bashrc](bashrc): Bashrc file
 - [setup.sh](setup.sh): Setup file for installation and backup of current configs
@@ -13,6 +13,8 @@ brew install --cask iterm2
     - Foreground: R = 0, G = 200, B = 0
     - Background: R = 0, G = 0, B = 0
     - Cursor colors > Cursor: R = 0, G = 200, B = 0
+  - Uncheck this option: Prefs > Profiles > Terminal > Save lines to scrollback in alternate screen mode
+    - This is done to avoid showing VIM buffer content in terminal. [Reference](https://superuser.com/questions/1022104/scrolling-up-in-iterm2-shows-previous-vim-sessions)
   - Iterm2 > Preferences > Profiles > Select profile name > Keys
     - In __Left option key__, select `Esc+`. This gives alternative of `ALT + b or f` using `left-option b or f`
     - __Note__: With [this](https://github.com/hansrajdas/dotfiles/commit/cf011d1489cfd45b71588c5a00b3e4c5ed3af7f5) commit, `vi` is enabled for command line also so this step will help if we go into some other prompt like `gdb`, `delve`, ...
