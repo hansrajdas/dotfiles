@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set ignorecase
+set smartcase
 set hlsearch
 set incsearch
 set ruler
@@ -9,6 +10,7 @@ set ruler
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set smartindent
 set expandtab
 set cursorline
 " set spell
@@ -50,7 +52,7 @@ call plug#end()  " Initialize plugin system
 " Mappings
 nnoremap <C-p> :Files!<Cr>
 nnoremap <Leader>b :Buffers<Cr>
-nnoremap <C-n> :bn<Cr>
+nnoremap <C-n> :n<Cr>
 nnoremap <C-s> :wn<Cr>
 
 " Commands

@@ -15,6 +15,8 @@ export CSCOPE_EDITOR=vim
 # System params
 HISTSIZE=500000
 
+alias v='vim'
+alias c='clear'
 alias rm='rm -iv'
 alias ff='find . -name'
 alias cp='cp -iv'
@@ -22,8 +24,7 @@ alias mv='mv -iv'
 alias xterm='xterm -bg white -fg black -fa 'Monospace''
 alias ctags='ctags -RV --file-tags=yes'
 # alias gotags='gotags -R . > tags'
-alias cscope='cscope -RC'
-alias c='clear'
+# alias cscope='cscope -RC'
 alias s='git status -s'
 alias d='git diff'
 alias b='git branch'
