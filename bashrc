@@ -7,7 +7,8 @@ RESET=`tput sgr0`
 
 # export PS1="\u@\h \w$ "
 export PS1="\[${GREEN}\]\w\[${RESET}\] \[${YELLOW}\]\$(parse_git_branch)\[${RESET}\]$ "
-export PATH=$PATH:$HOME/bin:$HOME/go/bin
+export PATH=$PATH:$HOME/bin:$HOME/go/bin:$HOME/google-cloud-sdk/bin/
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/code/sample-projects/interop-clusters/z/gke-creds.json
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 export CSCOPE_EDITOR=vim
