@@ -54,7 +54,7 @@ nnoremap <C-p> :Files!<Cr>
 nnoremap <Leader>b :Buffers<Cr>
 nnoremap <C-n> :n<Cr>
 nnoremap <C-s> :wn<Cr>
-nnoremap <C-g> :Rg! 
+nnoremap <C-l> :Rg! 
 
 " Plugin settings
 " Preview file at top 40% of the screen. Toggle file preview using `ctrl-/`.
