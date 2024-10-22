@@ -5,13 +5,13 @@ set smartcase
 set hlsearch
 set incsearch
 set ruler
-" set colorcolumn=100
+set colorcolumn=100
 " Tab is 4 spaces
 set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
-set expandtab
+" set expandtab
 set cursorline
 " set spell
 colorscheme default
@@ -62,7 +62,8 @@ let g:fzf_preview_window = ['up:40%', 'ctrl-/' ]
 
 " Commands
 " Run current python file
-command! Py ! python %
+command! Py ! python3 %
+command! Go ! go run %
 
 " Use Rg for searching skipping some files like tags, cscope.
 command! -bang -nargs=* Rg

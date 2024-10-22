@@ -12,6 +12,8 @@ export GOOGLE_APPLICATION_CREDENTIALS=$HOME/code/sample-projects/interop-cluster
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 export CSCOPE_EDITOR=vim
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
 
 # System params
 HISTSIZE=500000
@@ -50,6 +52,7 @@ alias l='ls -CF'
 
 alias notes='vim ~/code/2775/hansrajd_notes.md'
 alias sre='vim ~/code/2947/sre_troubleshooting_guide.md'
+alias dbs='vim ~/code/sample-projects/dbs-tmc.txt'
 
 # Set options
 shopt -s extglob
@@ -59,13 +62,13 @@ source $HOME/git-completion.bash
 source $HOME/completion.bash
 source $HOME/key-bindings.bash
 
-alias g='fd -H -t f --exclude={z,tags,tags-1,tags-2,.git,cscope.files,cscope.out} | xargs grep --color=auto -ni $1'
-alias gw='fd -H -t f --exclude={z,tags,tags-1,tags-2,.git,cscope.files,cscope.out} | xargs grep --color=auto -nw $1'
+alias g='fd -H -t f --exclude={z,tags,.git,cscope.files,cscope.out} | xargs grep --color=auto -ni $1'
+alias gw='fd -H -t f --exclude={z,tags,.git,cscope.files,cscope.out} | xargs grep --color=auto -nw $1'
 
 # function g() {
 #   grep -nri --color=auto "$1" .
 # }
-# 
+
 # function gg() {
 #   grep -nri --include=\*.{go,py,c,h,cpp,js,tf,json,sh,html,env,yml,yaml} --color=auto "$1" .
 # }
@@ -77,6 +80,8 @@ parse_git_branch() {
 # K8s
 source <(kubectl completion bash)  # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
 alias k=kubectl
+# alias kg='kubectl get --sort-by='metadata.creationTimestamp''
+alias kg='kubectl get'
 complete -F __start_kubectl k
 
 get_cluster_name() {
