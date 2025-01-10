@@ -50,11 +50,15 @@ call plug#end()  " Initialize plugin system
 " End plugins
 
 " Mappings
-nnoremap <C-p> :Files!<Cr>
+" Full screen mode (with !) is not used for `Files` and `Rg` commands
+" because host terminal is cleared and history is lost.
+" nnoremap <C-p> :Files!<Cr>
+nnoremap <C-p> :Files<Cr>
 nnoremap <Leader>b :Buffers<Cr>
 nnoremap <C-n> :n<Cr>
 nnoremap <C-s> :wn<Cr>
-nnoremap <C-l> :Rg! 
+nnoremap <C-l> :Rg
+" nnoremap <C-l> :Rg!
 
 " Plugin settings
 " Preview file at top 40% of the screen. Toggle file preview using `ctrl-/`.

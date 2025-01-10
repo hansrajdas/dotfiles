@@ -50,7 +50,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias notes='vim ~/code/2775/hansrajd_notes.md'
+#alias notes='vim ~/code/2775/hansrajd_notes.md'
+alias notes='vim ~/code/a69309f1244d55e770683d935ca7d934/notes.md'
 alias sre='vim ~/code/2947/sre_troubleshooting_guide.md'
 alias dbs='vim ~/code/sample-projects/dbs-tmc.txt'
 
