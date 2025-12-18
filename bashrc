@@ -7,13 +7,13 @@ RESET=`tput sgr0`
 
 # export PS1="\u@\h \w$ "
 export PS1="\[${GREEN}\]\w\[${RESET}\] \[${YELLOW}\]\$(parse_git_branch)\[${RESET}\]$ "
-export PATH=$PATH:$HOME/bin:$HOME/go/bin:$HOME/google-cloud-sdk/bin/
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/code/sample-projects/interop-clusters/z/gke-creds.json
 export CLICOLOR=YES  # For macOS
 export EDITOR=vim
 export CSCOPE_EDITOR=vim
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
+export PATH=$PATH:$HOME/bin:$GOBIN:$HOME/google-cloud-sdk/bin/
 
 # System params
 HISTSIZE=500000
@@ -26,6 +26,8 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias xterm='xterm -bg white -fg black -fa 'Monospace''
 alias ctags='ctags -RV --file-tags=yes'
+
+# Instead of gotags -- use vim-go plugin.
 # alias gotags='gotags -R . > tags'
 # alias cscope='cscope -RC'
 alias s='git status -s'
@@ -54,6 +56,7 @@ alias l='ls -CF'
 alias notes='vim ~/code/a69309f1244d55e770683d935ca7d934/notes.md'
 alias sre='vim ~/code/2947/sre_troubleshooting_guide.md'
 alias dbs='vim ~/code/sample-projects/dbs-tmc.txt'
+alias wt='caffeinate -dimsu' # Keep network and other hardware awake in locked screen
 
 # Set options
 shopt -s extglob
@@ -96,3 +99,40 @@ get_namespace() {
 alias kk='echo cluster: "${RED}$(get_cluster_name)${RESET}    namespace: ${RED}$(get_namespace)${RESET}"'
 
 alias dlv=/Users/hansrajd/go/bin/dlv
+
+function slock() {
+	sheepctl -n tkg-releng lock ssh "${1}"
+}
+
+function ssh_to_jumpbox() {
+	local testbed_path="${1}"
+	if [ ! -f ${testbed_path} ]; then
+		echo "File not found! '$testbed_path'" >&2
+		return 1
+	fi
+	local ssh_command="${2:-}"
+	local jq_selector=""
+	if jq --exit-status '.access' ${testbed_path} > /dev/null; then
+		jq_selector='.access | fromjson | '
+	fi
+	local jumpbox_ip4="$(jq -r "${jq_selector}"'.ovfVm[0].ip4' ${testbed_path})"
+	local jumpbox_user="$(jq -r "${jq_selector}"'.ovfVm[0].username' ${testbed_path})"
+	local jumpbox_pass="$(jq -r "${jq_selector}"'.ovfVm[0].password' ${testbed_path})"
+	sshpass -p "$jumpbox_pass" ssh -A -D 1082 -o "StrictHostKeyChecking no" "$jumpbox_user"@"$jumpbox_ip4" "${ssh_command}"
+}
+
+function slock6() {
+	local id="${1}"
+	if [[ -z "$id" ]]; then
+		echo "ID is required" >&2
+		return 1
+	fi
+
+	sheepctl lock get "$id" > ./testbedInfo.json
+	if [ ! -f "./testbedInfo.json" ]; then
+		echo "Failed to create testbedInfo.json" >&2
+		return 1
+	fi
+
+	ssh_to_jumpbox testbedInfo.json
+}
