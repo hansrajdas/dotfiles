@@ -5,13 +5,13 @@ set smartcase
 set hlsearch
 set incsearch
 set ruler
-set colorcolumn=100
+" set colorcolumn=100
 " Tab is 4 spaces
 set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
-" set expandtab
+set expandtab
 set cursorline
 " set spell
 colorscheme default
@@ -49,6 +49,14 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()  " Initialize plugin system
 " End plugins
 
+" Plugin settings starts
+let g:go_gopls_enabled = 1
+let g:go_use_language_server = 1
+
+" Preview file at top 40% of the screen. Toggle file preview using `ctrl-/`.
+let g:fzf_preview_window = ['up:40%', 'ctrl-/' ]
+" Plugin settings ends
+
 " Mappings
 " Full screen mode (with !) is not used for `Files` and `Rg` commands
 " because host terminal is cleared and history is lost.
@@ -57,12 +65,8 @@ nnoremap <C-p> :Files<Cr>
 nnoremap <Leader>b :Buffers<Cr>
 nnoremap <C-n> :n<Cr>
 nnoremap <C-s> :wn<Cr>
-nnoremap <C-l> :Rg
-" nnoremap <C-l> :Rg!
-
-" Plugin settings
-" Preview file at top 40% of the screen. Toggle file preview using `ctrl-/`.
-let g:fzf_preview_window = ['up:40%', 'ctrl-/' ]
+nnoremap <C-l> :Rg 
+" nnoremap <C-l> :Rg! 
 
 " Commands
 " Run current python file
