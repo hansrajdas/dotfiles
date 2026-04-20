@@ -1,5 +1,6 @@
-all## dotfiles
-- [vimrc](vimrc): VIM settings
+## dotfiles
+- [vimrc](vimrc): Vim settings
+- [nvim](nvim): Neovim config (`init.lua` and any future `lua/`, `after/`, etc.). `setup.sh` links `~/.config/nvim` to this directory (same idea as `vimrc`, but Neovim uses the XDG config path).
 - [bashrc](bashrc): Bashrc file
 - [setup.sh](setup.sh): Setup file for installation and backup of current configs
 

@@ -29,3 +29,8 @@ ln -sf ${BASE}/bashrc ~/.bashrc
 # 3. tmux.conf
 mv -v ~/.tmux.conf ~/.tmux.conf.${BACKUP_EXT} 2> /dev/null
 ln -sf ${BASE}/tmux.conf ~/.tmux.conf
+
+# 4. Neovim (~/.config/nvim → dotfiles/nvim; supports lua/, after/, lockfile, etc.)
+mkdir -p ~/.config
+mv -v ~/.config/nvim ~/.config/nvim.${BACKUP_EXT} 2> /dev/null
+ln -sf ${BASE}/nvim ~/.config/nvim

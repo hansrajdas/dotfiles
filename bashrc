@@ -13,12 +13,13 @@ export EDITOR=vim
 export CSCOPE_EDITOR=vim
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$HOME/bin:$GOBIN:$HOME/google-cloud-sdk/bin/
+export PATH=$PATH:$HOME/bin:$GOBIN:$HOME/google-cloud-sdk/bin:$HOME/.local/bin
 
 # System params
 HISTSIZE=500000
 
-alias v='vim'
+alias v='nvim'
+alias vim='nvim'
 alias c='clear'
 alias rm='rm -iv'
 alias ff='find . -name'
