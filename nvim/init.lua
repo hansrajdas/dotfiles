@@ -16,7 +16,8 @@ vim.opt.expandtab      = true
 vim.opt.cursorline     = true
 vim.opt.mouse          = ""
 vim.opt.laststatus     = 0    -- hide statusline
-vim.opt.cmdheight      = 0    -- hide command line when not in use
+vim.opt.cmdheight      = 1    -- 1 line for messages; 0 forces "Press ENTER" for any output
+vim.opt.shortmess:append("T") -- truncate long messages to fit in one line
 vim.opt.diffopt:append("vertical")
 
 -- Search down into subfolders (used by :find)
@@ -93,6 +94,15 @@ map("n", "<C-n>", ":n<CR>",       { desc = "Next file in arglist" })
 map("n", "<C-s>", ":wn<CR>",      { desc = "Write and next file" })
 -- Ripgrep search (no <CR> — waits for search term)
 map("n", "<C-l>", ":Rg ",         { desc = "fzf: ripgrep search" })
+
+-- ============================================================
+-- Auto commands
+-- ============================================================
+vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+    callback = function()
+        vim.api.nvim_echo({{"", ""}}, false, {})
+    end,
+})
 
 -- ============================================================
 -- User commands
