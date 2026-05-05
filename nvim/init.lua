@@ -71,8 +71,9 @@ require("lazy").setup({
 -- ============================================================
 -- Plugin settings
 -- ============================================================
-vim.g.go_gopls_enabled      = 1
+vim.g.go_gopls_enabled       = 1
 vim.g.go_use_language_server = 1
+vim.g.go_echo_command_info   = 0
 
 -- Preview window: top 40%, toggle with ctrl-/
 vim.g.fzf_preview_window = { "up:40%", "ctrl-/" }
