@@ -98,9 +98,25 @@ map("n", "<C-l>", ":Rg ",         { desc = "fzf: ripgrep search" })
 -- ============================================================
 -- Auto commands
 -- ============================================================
+local skip_clear = false
+
 vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
     callback = function()
+        if skip_clear then
+            skip_clear = false
+            return
+        end
         vim.api.nvim_echo({{"", ""}}, false, {})
+    end,
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
+    callback = function()
+        local path = vim.fn.expand("%")
+        if path ~= "" then
+            skip_clear = true
+            vim.api.nvim_echo({{path, ""}}, false, {})
+        end
     end,
 })
 
