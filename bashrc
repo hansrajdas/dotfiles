@@ -18,8 +18,8 @@ export PATH=$PATH:$HOME/bin:$GOBIN:$HOME/google-cloud-sdk/bin:$HOME/.local/bin
 # System params
 HISTSIZE=500000
 
-alias v='nvim'
-alias vim='nvim'
+alias v='vim'
+#alias vim='nvim'
 alias c='clear'
 alias rm='rm -iv'
 alias ff='find . -name'
@@ -54,7 +54,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 #alias notes='vim ~/code/2775/hansrajd_notes.md'
-alias notes='vim ~/code/a69309f1244d55e770683d935ca7d934/notes.md'
+alias notes='vim ~/code/281ced4bb582f2b54f956994cb2321ae/notes.md'
 alias sre='vim ~/code/2947/sre_troubleshooting_guide.md'
 alias dbs='vim ~/code/sample-projects/dbs-tmc.txt'
 alias wt='caffeinate -dimsu' # Keep network and other hardware awake in locked screen
