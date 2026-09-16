@@ -5,6 +5,11 @@
 - [setup.sh](setup.sh): Setup file for installation and backup of current configs
 
 ## MacOS system settings
+- Install homebrew package manager
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 - Install iterm2 on MacOS
 ```bash
 brew install --cask iterm2

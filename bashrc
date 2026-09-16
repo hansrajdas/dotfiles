@@ -13,7 +13,7 @@ export EDITOR=vim
 export CSCOPE_EDITOR=vim
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$HOME/bin:$GOBIN:$HOME/google-cloud-sdk/bin:$HOME/.local/bin
+export PATH=/opt/homebrew/bin:$PATH:$HOME/bin:$GOBIN:$HOME/google-cloud-sdk/bin:$HOME/.local/bin
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=ignore
 
 # System params

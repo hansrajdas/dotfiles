@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/opt/homebrew/bin/bash
 
 BASE=$PWD
 BACKUP_EXT=$(date +%s)
