@@ -4,6 +4,26 @@
 - [bashrc](bashrc): Bashrc file
 - [setup.sh](setup.sh): Setup file for installation and backup of current configs
 
+## New machine setup checklist
+1. Install Homebrew (see below), then clone this repo (e.g. to `~/code/dotfiles`).
+2. Run `./setup.sh` — installs required CLI tools (go, bazelisk, buildozer, lcov, fzf, gh,
+   sshpass, sshuttle) via Homebrew, symlinks `vimrc`/`bashrc` into place, and installs
+   vim-go's Go tool dependencies (gopls, dlv, etc.). `tmux`/`neovim` configs are only linked
+   if those tools are already installed — `brew install tmux neovim` first if you want them.
+3. Recreate `~/.bash_profile` manually. It is **not** tracked in this repo since it holds
+   real credentials/tokens — restore it from your own backup/password manager.
+4. Set your global git identity (not restored by `setup.sh`):
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "you@example.com"
+   ```
+5. If you use a GitHub Enterprise instance in addition to github.com, authenticate `gh`
+   against it: `gh auth login --hostname <your-enterprise-host>`.
+6. Make Homebrew's bash your default shell (see below) — note that macOS's own `/etc/paths`
+   puts `/usr/bin:/bin` ahead of `/opt/homebrew/bin`, so `which bash` still resolves to the
+   old system bash unless you explicitly prepend `/opt/homebrew/bin` to `PATH` in `bashrc`
+   (already done in this repo's [bashrc](bashrc)).
+
 ## MacOS system settings
 - Install homebrew package manager
 ```

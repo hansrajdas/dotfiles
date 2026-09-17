@@ -100,7 +100,7 @@ get_namespace() {
 
 alias kk='echo cluster: "${RED}$(get_cluster_name)${RESET}    namespace: ${RED}$(get_namespace)${RESET}"'
 
-alias dlv=/Users/hansrajd/go/bin/dlv
+alias dlv=$GOBIN/dlv
 
 function slock() {
 	sheepctl -n tkg-releng lock ssh "${1}"
